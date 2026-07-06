@@ -2,7 +2,7 @@ services:
   - type: static
     name: metro-dashboard
     buildCommand: npm run build
-    publishPath: dist
+    staticPublishPath: dist
     headers:
       - path: /*
         name: X-Frame-Options
