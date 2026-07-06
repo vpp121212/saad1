@@ -61,7 +61,7 @@ function buildMailBody(inc: Incident): string {
     '',
     '=== 4. Incident Details ===',
     `Type: ${inc.category} (${inc.severity})`,
-    `Location: ${inc.location}`,
+    `Location: ${inc.location}${inc.locationDetail ? ` (${inc.locationDetail})` : ''}`,
     `Description: ${inc.description}`,
     `Emergency Code: ${inc.emergencyCode}`,
     `Permit Number: ${inc.permitNumber}`,
@@ -203,6 +203,7 @@ export function IncidentDetail({ incident, onBack, onUpdate, onClose }: Props) {
           <Field label="Type" value={incident.category} />
           <Field label="Severity" value={incident.severity} />
           <Field label="Location" value={incident.location} />
+          <Field label="Room / Detail" value={incident.locationDetail} />
           <Field label="Emergency Code" value={incident.emergencyCode} />
           <Field label="Permit Number" value={incident.permitNumber} />
         </div>

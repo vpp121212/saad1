@@ -1,7 +1,7 @@
 // ===== Core Types =====
 
 export type Shift = 'Morning' | 'Evening' | 'Night'
-export type Location = 'Platform' | 'Concourse' | 'Street Level' | 'Track' | 'Equipment Room'
+export type Location = 'Platform 01' | 'Platform 02' | 'Concourse' | 'Street Level' | 'Track 01' | 'Track 02' | 'Equipment Room' | 'Technical Room'
 export type IncidentCategory =
   | 'Passenger Medical' | 'Injury / Fall' | 'Fire Alarm' | 'Smoke'
   | 'Fire Pump' | 'Generator' | 'Chiller' | 'Tunnel Ventilation TVS'
@@ -42,6 +42,7 @@ export interface Incident {
   severity: Severity
   description: string
   location: Location
+  locationDetail: string
   emergencyCode: string
   permitNumber: string
 

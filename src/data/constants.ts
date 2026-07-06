@@ -51,7 +51,7 @@ export const lines = [
 ]
 
 export const shifts = ['Morning', 'Evening', 'Night'] as const
-export const locations = ['Platform', 'Concourse', 'Street Level', 'Track', 'Equipment Room'] as const
+export const locations = ['Platform 01', 'Platform 02', 'Concourse', 'Street Level', 'Track 01', 'Track 02', 'Equipment Room', 'Technical Room'] as const
 export const reporterRoles = [
   'OCC', 'Station Manager (SM)', 'Asst Station Manager (ASM)', 'Station Ambassador (SA)',
   'Security', 'Maintenance', 'Cleaner', 'Passenger', 'Police', 'Civil Defense', 'Other',

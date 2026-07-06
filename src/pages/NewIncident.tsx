@@ -32,7 +32,8 @@ function emptyInc(): Incident {
     category: 'Passenger Medical',
     severity: 'Medium',
     description: '',
-    location: 'Platform',
+    location: 'Platform 01',
+    locationDetail: '',
     emergencyCode: '',
     permitNumber: '',
     actions: [],
@@ -171,6 +172,8 @@ export function NewIncident({ onSave, onCancel }: Props) {
             <select className="inp" value={inc.severity} onChange={e => u({ severity: e.target.value as any })}>{severities.map(s => <option key={s}>{s}</option>)}</select></div>
           <div><label className="text-[9px] font-mono block mb-1" style={{ color: 'var(--muted-foreground)' }}>Location in Station</label>
             <select className="inp" value={inc.location} onChange={e => u({ location: e.target.value as any })}>{locations.map(l => <option key={l}>{l}</option>)}</select></div>
+          <div><label className="text-[9px] font-mono block mb-1" style={{ color: 'var(--muted-foreground)' }}>Room / Detail</label>
+            <input className="inp" placeholder="Room number (if applicable)" value={inc.locationDetail} onChange={e => u({ locationDetail: e.target.value })} /></div>
           <div><label className="text-[9px] font-mono block mb-1" style={{ color: 'var(--muted-foreground)' }}>Emergency Code</label>
             <input className="inp" value={inc.emergencyCode} onChange={e => u({ emergencyCode: e.target.value })} /></div>
           <div><label className="text-[9px] font-mono block mb-1" style={{ color: 'var(--muted-foreground)' }}>Permit Number</label>
